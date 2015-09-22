@@ -4,8 +4,8 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
     <title>Cadastro Veículos</title>
 
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script src="js/script.js" type="text/javascript"></script>  
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js" type="text/javascript"></script>  
 
 </head>
 
