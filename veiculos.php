@@ -22,26 +22,45 @@
 
 			<form class="form-horizontal" action="veiculo.php" method="GET" name="cadastroVeiculoForm">
 
-				<div class="form-group">
-                    <label class="col-3 control-label" for="marca">Marca:</label>
-                    <div class="col-4">
-                        <select class="form-control" name="marca" id="marca"></select>
+                <div class="col-8">
+
+    				<div class="form-group">
+                        <label class="col-4 control-label" for="marca">Marca:</label>
+                        <div class="col-5">
+                            <select class="form-control" name="marca" id="marca"></select>
+                        </div>
                     </div>
+
+    				<div class="form-group">
+                        <label class="col-4 control-label" for="modelo">Modelo:</label>
+                        <div class="col-6">
+                            <input type="text" class="form-control" name="modelo" id="modelo"></select>
+                        </div>
+                    </div>
+
+    				<div class="form-group">
+                        <label class="col-4 control-label" for="modelo">Ano Fabricação:</label>
+                        <div class="col-4">
+                            <input type="text" class="form-control" name="modelo" id="modelo"></select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <fieldset id="opcionais" class="col-8">
+                            <legend>Opcionais:</legend>
+                        </fieldset>
+                    </div>
+
                 </div>
 
-				<div class="form-group">
-                    <label class="col-3 control-label" for="modelo">Modelo:</label>
-                    <div class="col-6">
-                        <input type="text" class="form-control" name="modelo" id="modelo"></select>
-                    </div>
-                </div>
+                <div class="col-2">
 
-				<div class="form-group">
-                    <label class="col-3 control-label" for="modelo">Ano Fabricação:</label>
-                    <div class="col-3">
-                        <input type="text" class="form-control" name="modelo" id="modelo"></select>
-                    </div>
-                </div>
+                    <div class="btn-bottom">
+                        <input type="submit" value="Cadastrar" class="btn"/>
+                        <input type="reset" value="Limpar" class="btn">
+                    </div>    
+
+                </div>    
 
 			</form>
 

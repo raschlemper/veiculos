@@ -9,7 +9,7 @@ body {
   	width: 760px;
   	background-color: #FFF;
   	border: 1px solid #CCC;
-  	height: 300px;
+  	height: 540px;
 }
 
 .title, .body {
@@ -32,17 +32,50 @@ body {
   	clear: left;
 }
 
+fieldset {
+  	border: 1px solid #CCC;
+ 	width: 100%;
+  	margin-left: 16.67%;
+	border-radius: 4px;
+}
+
 .control-label {
 	padding-top: 7px;
 	margin-bottom: 0;
 	text-align: right;
+	font-weight: 700;
 }
 
 label {
 	display: inline-block;
 	max-width: 100%;
 	margin-bottom: 5px;
-	font-weight: 700;
+	padding-right: 10px;
+}
+
+.btn {
+	display: inline-block;
+	margin-bottom: 15px;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid #CCC;
+	white-space: nowrap;
+	padding: 10px 15px;
+	font-size: 15px;
+	line-height: 1.42857143;
+	border-radius: 4px;
+	-webkit-user-select: none;
+}
+
+.btn-bottom {
+  	bottom: 0;
+  	margin-bottom: 0;
+  	margin-top: 300px;
 }
 
 .form-control {
@@ -64,52 +97,49 @@ label {
 	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
+.form-control-inside {
+  	display: inline;
+  	width: auto;
+}
+
 .col-1 {
-  	width: 8.33%;
+  	width: 8%;
 }
 
 .col-2 {
-  	width: 16.67%;
+  	width: 16%;
 }
 
 .col-3 {
-  	width: 25%;
+  	width: 24%;
 }
 
 .col-4 {
-  	width: 33.33%;
+  	width: 32%;
 }
 
 .col-5 {
-  	width: 41.67%;
+  	width: 40%;
 }
 
 .col-6 {
-  	width: 50%;
+  	width: 48%;
 }
 
 .col-7 {
-  	width: 58.33%;
+  	width: 56%;
 }
 
 .col-8 {
-  	width: 66.67%;
+  	width: 64%;
 }
 
 .col-9 {
-  	width: 75%;
+  	width: 72%;
 }
 
 .col-10 {
-  	width: 83.33%;
-}
-
-.col-11 {
-  	width: 91.67%;
-}
-
-.col-12 {
-  	width: 100%;
+  	width: 80%;
 }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 
