@@ -6,7 +6,7 @@ body {
 
 .content {	
   	margin: 0 auto;
-  	width: 50%;
+  	width: 760px;
   	background-color: #FFF;
   	border: 1px solid #CCC;
   	height: 300px;
@@ -22,8 +22,14 @@ body {
 	padding: 5px 20px;
 }
 
+.form-horizontal .form-group {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
 .form-group {
-  	margin-bottom: 15px;
+  	padding-bottom: 50px;
+  	clear: left;
 }
 
 .control-label {
@@ -58,19 +64,57 @@ label {
 	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
-.col-md-2 {
-  	width: 16.66666667%;
+.col-1 {
+  	width: 8.33%;
 }
 
-.col-md-3 {
+.col-2 {
+  	width: 16.67%;
+}
+
+.col-3 {
   	width: 25%;
 }
 
-.col-md-2, .col-md-3  {
-	float: left;
+.col-4 {
+  	width: 33.33%;
 }
 
-.col-md-2, .col-md-3  {
+.col-5 {
+  	width: 41.67%;
+}
+
+.col-6 {
+  	width: 50%;
+}
+
+.col-7 {
+  	width: 58.33%;
+}
+
+.col-8 {
+  	width: 66.67%;
+}
+
+.col-9 {
+  	width: 75%;
+}
+
+.col-10 {
+  	width: 83.33%;
+}
+
+.col-11 {
+  	width: 91.67%;
+}
+
+.col-12 {
+  	width: 100%;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 
+.col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+	float: left;
 	position: relative;
 	min-height: 1px;
 	padding-right: 15px;
