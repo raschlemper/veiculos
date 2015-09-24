@@ -102,6 +102,14 @@ label {
   	width: auto;
 }
 
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
 .col-1 {
   	width: 8%;
 }

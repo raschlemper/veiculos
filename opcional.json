@@ -1,0 +1,11 @@
+[
+	{"id": "direcaoHidraulica", "value": "dh", "label": "Direção Hidraulica"},
+	{"id": "arCondiconado", "value": "ac", "label": "Ar Condicionado"},
+	{"id": "airBag", "value": "ab", "label": "Air Bag"},
+	{"id": "alarme", "value": "al", "label": "Alarme"},
+	{"id": "bancoCouro", "value": "bc", "label": "Banco de Couro"},
+	{"id": "som", "value": "so", "label": "Som"},
+	{"id": "travas", "value": "tr", "label": "Travas"},
+	{"id": "pilotoAutomatico", "value": "pa", "label": "Piloto Automático"},
+	{"id": "outro", "value": "ou", "label": "Outro", "input": "text"}
+]
