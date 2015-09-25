@@ -32,6 +32,11 @@ body {
   	clear: left;
 }
 
+.group {
+  	padding-bottom: 30px;
+  	clear: left;
+}
+
 fieldset {
   	border: 1px solid #CCC;
  	width: 100%;
@@ -75,7 +80,7 @@ label {
 .btn-bottom {
   	bottom: 0;
   	margin-bottom: 0;
-  	margin-top: 300px;
+  	margin-top: 310px;
 }
 
 .form-control {
@@ -108,6 +113,16 @@ label {
 
 .text-right {
     text-align: right;
+}
+
+.error {
+	display: none;
+	color: red;
+	font-size: 8pt;
+	padding-bottom: 10px;
+}
+.form-control-error {
+	border: 1px solid red;
 }
 
 .col-1 {

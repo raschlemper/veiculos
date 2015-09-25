@@ -1,11 +1,11 @@
 [
-	{"id": "direcaoHidraulica", "value": "dh", "label": "Direção Hidraulica"},
-	{"id": "arCondiconado", "value": "ac", "label": "Ar Condicionado"},
-	{"id": "airBag", "value": "ab", "label": "Air Bag"},
-	{"id": "alarme", "value": "al", "label": "Alarme"},
-	{"id": "bancoCouro", "value": "bc", "label": "Banco de Couro"},
-	{"id": "som", "value": "so", "label": "Som"},
-	{"id": "travas", "value": "tr", "label": "Travas"},
-	{"id": "pilotoAutomatico", "value": "pa", "label": "Piloto Automático"},
-	{"id": "outro", "value": "ou", "label": "Outro", "input": "text"}
+	{"key": "direcaoHidraulica", "value": "0", "label": "Direção Hidraulica"},
+	{"key": "arCondiconado", "value": "1", "label": "Ar Condicionado"},
+	{"key": "airBag", "value": "2", "label": "Air Bag"},
+	{"key": "alarme", "value": "3", "label": "Alarme"},
+	{"key": "bancoCouro", "value": "4", "label": "Banco de Couro"},
+	{"key": "som", "value": "5", "label": "Som"},
+	{"key": "travas", "value": "6", "label": "Travas"},
+	{"key": "pilotoAutomatico", "value": "7", "label": "Piloto Automático"},
+	{"key": "outro", "value": "8", "label": "Outro", "input": "text"}
 ]
