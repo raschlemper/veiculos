@@ -27,7 +27,7 @@
                 <div class="col-8">
 
     				<div class="form-group">
-                        <label class="col-4 control-label" for="marca">Marca:</label>
+                        <label class="col-4 control-label" for="marca">Marca</label>
                         <div class="col-6">
                             <select class="form-control" name="marca" id="marca"></select>
                             <span class="error" id="marca-error"></span>
@@ -35,7 +35,7 @@
                     </div>
 
     				<div class="form-group">
-                        <label class="col-4 control-label" for="modelo">Modelo:</label>
+                        <label class="col-4 control-label" for="modelo">Modelo</label>
                         <div class="col-6">
                             <input type="text" class="form-control" name="modelo" id="modelo">
                             <span class="error" id="modelo-error"></span>
@@ -43,7 +43,7 @@
                     </div>
 
     				<div class="form-group">
-                        <label class="col-4 control-label" for="ano">Ano Fabricação:</label>
+                        <label class="col-4 control-label" for="ano">Ano Fabricação</label>
                         <div class="col-6">
                             <input type="text" class="form-control" name="ano" id="ano">
                             <span class="error" id="ano-error"></span>
@@ -53,7 +53,7 @@
                     <div class="form-group">
                         <fieldset id="opcionais" class="col-8">
                             <span class="error" id="ckbOpcional-error"></span>
-                            <legend>Opcionais:</legend>
+                            <legend>Opcionais</legend>
                         </fieldset>
                     </div>
 

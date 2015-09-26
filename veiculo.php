@@ -27,7 +27,7 @@
             $json = json_decode($data, true);
             foreach ($json as $key => $value) {               
                 if($value[input]) { 
-                    $value[label] = $_POST["input-" . $value[key]]; 
+                    $value[label] = $_POST[$value[key]."Input"]; 
                 }
                 if($key == $id) { return $value; } 
             }
@@ -43,44 +43,58 @@
 		</div>	
 
 		<div class="body">
-            <div class="group">
-                <div class="text-right col-4"><strong>Marca:</strong></div>
-                <div class="text-left col-5">
-                    <?php 
-                        $marca = getMarca($_POST["marca"]);
-                        echo $marca[value];
-                    ?>
+
+            <div class="col-8">
+
+                <div class="group">
+                    <div class="text-right col-4"><strong>Marca</strong></div>
+                    <div class="text-left col-5">
+                        <?php 
+                            $marca = getMarca($_POST["marca"]);
+                            echo $marca[value];
+                        ?>
+                    </div>
                 </div>
+                <div class="group">
+                    <div class="text-right col-4"><strong>Modelo</strong></div>
+                    <div class="text-left col-5">
+                        <?php 
+                            $modelo = $_POST["modelo"];
+                            echo $modelo;
+                        ?>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="text-right col-4"><strong>Ano Fabricação</strong></div>
+                    <div class="text-left col-5">
+                        <?php 
+                            $ano = $_POST["ano"];
+                            echo $ano;
+                        ?>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="text-right col-4"><strong>Opcionais</strong></div>
+                    <div class="text-left col-5">
+                        <?php 
+                            foreach($_POST["ckbOpcional"] as $opcional) { 
+                                $opc = getOpcional($opcional);
+                                echo $opc[label] . "<BR>"; 
+                            }
+                        ?>
+                    </div>
+                </div>  
+
             </div>
-            <div class="group">
-                <div class="text-right col-4"><strong>Modelo:</strong></div>
-                <div class="text-left col-5">
-                    <?php 
-                        $modelo = $_POST["modelo"];
-                        echo $modelo;
-                    ?>
-                </div>
-            </div>
-            <div class="group">
-                <div class="text-right col-4"><strong>Ano Fabricação:</strong></div>
-                <div class="text-left col-5">
-                    <?php 
-                        $ano = $_POST["ano"];
-                        echo $ano;
-                    ?>
-                </div>
-            </div>
-            <div class="group">
-                <div class="text-right col-4"><strong>Opcionais:</strong></div>
-                <div class="text-left col-5">
-                    <?php 
-                        foreach($_POST["ckbOpcional"] as $opcional) { 
-                            $opc = getOpcional($opcional);
-                            echo $opc[label] . "<BR>"; 
-                        }
-                    ?>
-                </div>
-            </div>  
+
+            <div class="col-2">
+
+                <div>
+                    <button type="button" class="btn" 
+                        onclick="location.href='cadastro.php';">Voltar</button>
+                </div>    
+
+            </div>    
 
 		</div>	
 
