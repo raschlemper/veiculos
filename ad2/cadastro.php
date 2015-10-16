@@ -63,7 +63,8 @@
 
                     <div class="btn-bottom">
                         <input type="submit" value="Cadastrar" class="btn"/>
-                        <input type="reset" value="Limpar" class="btn">
+                        <button type="button" class="btn" 
+                            onclick="location.href='veiculos.php';">Listar todos os cadastros</button>
                     </div>    
 
                 </div>    

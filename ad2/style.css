@@ -12,6 +12,10 @@ body {
   	height: 540px;
 }
 
+.content-table {	
+  	width: 900px;
+}
+
 .title, .body {
 	padding: 10px 20px;
 }
@@ -83,6 +87,16 @@ label {
   	margin-top: 310px;
 }
 
+a.btn {	
+    background-color: buttonface;
+    text-decoration: none;
+    color: black;
+}
+
+.align-rigth {
+	float: right;
+}
+
 .form-control {
 	display: block;
 	width: 100%;
@@ -107,6 +121,10 @@ label {
   	width: auto;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .text-left {
     text-align: left;
 }
@@ -123,6 +141,54 @@ label {
 }
 .form-control-error {
 	border: 1px solid red;
+}
+
+table {
+    background-color: transparent;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    max-height: 300px;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+}
+
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    font-size: 10pt;
+}
+
+.table>thead:first-child>tr:first-child>th {
+    border-top: 0;
+}
+
+.table-bordered>thead>tr>th {
+    border: 1px solid #ddd;
+    border-bottom-width: 2px;
+}
+
+.table>tbody>tr>td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    font-size: 10pt;
+}
+
+.table-bordered>tbody>tr>td {
+    border: 1px solid #ddd;
 }
 
 .col-1 {
@@ -163,6 +229,10 @@ label {
 
 .col-10 {
   	width: 80%;
+}
+
+.col-full {
+  	width: 100%;
 }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 

@@ -2,67 +2,84 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <title>Cadastro Veíulos</title>
+    <title>Veículos Cadastrados</title>
 
     <link href="style.css" rel="stylesheet" type="text/css">
     <script src="script.js" type="text/javascript"></script>  
-    <script src="script.json.js" type="text/javascript"></script>  
 
 </head>
 
 <body>
 
-	<div class="content">
+    <?php
+
+        $conn = mysql_connect("localhost", "root", "123456");
+        mysql_select_db("locadoraveiculos");
+        $result = mysql_query( "select * from veiculo");
+
+    ?>
+
+	<div class="content content-table">
 
 		<div class="title">
-			<h3>Cadastro Veíulos</h3>
+			<h3>Veículos Cadastrados</h3>
 		</div>	
 
 		<div class="body">
 
-			<form class="form-horizontal" action="veiculo.php" method="GET" name="cadastroVeiculoForm">
+            <div class="col-full">
 
-                <div class="col-8">
-
-    				<div class="form-group">
-                        <label class="col-4 control-label" for="marca">Marca:</label>
-                        <div class="col-5">
-                            <select class="form-control" name="marca" id="marca"></select>
-                        </div>
-                    </div>
-
-    				<div class="form-group">
-                        <label class="col-4 control-label" for="modelo">Modelo:</label>
-                        <div class="col-6">
-                            <input type="text" class="form-control" name="modelo" id="modelo"></select>
-                        </div>
-                    </div>
-
-    				<div class="form-group">
-                        <label class="col-4 control-label" for="modelo">Ano Fabricação:</label>
-                        <div class="col-4">
-                            <input type="text" class="form-control" name="modelo" id="modelo"></select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <fieldset id="opcionais" class="col-8">
-                            <legend>Opcionais:</legend>
-                        </fieldset>
-                    </div>
-
-                </div>
-
-                <div class="col-2">
-
-                    <div class="btn-bottom">
-                        <input type="submit" value="Cadastrar" class="btn"/>
-                        <input type="reset" value="Limpar" class="btn">
-                    </div>    
-
+                <div class="align-rigth">
+                    <button type="button" class="btn" 
+                        onclick="location.href='cadastro.php';">Voltar</button>
                 </div>    
 
-			</form>
+            </div>    
+
+            <div class="col-full">
+
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Marca</th>
+                            <th class="text-center">Modelo</th>
+                            <th class="text-center">Ano</th>
+                            <th class="text-center">Dir. Hid.</th>
+                            <th class="text-center">Ar. Cond.</th>
+                            <th class="text-center">Air. Bag.</th>
+                            <th class="text-center">Alarme</th>
+                            <th class="text-center">Banco Couro</th>
+                            <th class="text-center">Som</th>
+                            <th class="text-center">Travas</th>
+                            <th class="text-center">Piloto</th>
+                            <th class="text-center">Outros</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <?php
+                                while ($relacao = mysql_fetch_array($result)) {
+                            ?> 
+                            <td class="text-left"><?php echo $relacao["marca"]; ?></td>
+                            <td class="text-left"><?php echo $relacao["modelo"]; ?></td>
+                            <td class="text-center"><?php echo $relacao["ano"]; ?></td>
+                            <td class="text-center"><?php if($relacao["direcao"] == 'S') { echo X; } ?></td>
+                            <td class="text-center"><?php if($relacao["ar_condicionado"] == 'S') { echo X; } ?></td>
+                            <td class="text-center"><?php if($relacao["air_bag"] == 'S') { echo X; } ?></td>
+                            <td class="text-center"><?php if($relacao["alarme"] == 'S') { echo X; } ?></td>
+                            <td class="text-center"><?php if($relacao["banco_couro"] == 'S') { echo X; } ?></td>
+                            <td class="text-center"><?php if($relacao["som"] == 'S') { echo X; } ?></td>
+                            <td class="text-center"><?php if($relacao["tavas"] == 'S') { echo X; } ?></td>
+                            <td class="text-center"><?php if($relacao["piloto_automatico"] == 'S') { echo X; } ?></td>
+                            <td class="text-center"><?php $relacao["outro"] ?></td>
+                            <?php 
+                                }
+                            ?> 
+                        </tr>
+                    </tbody>    
+                </table> 
+
+            </div>
 
 		</div>	
 
