@@ -1,0 +1,175 @@
+
+body {
+    background-color: #EEE;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+
+.content {	
+  	margin: 0 auto;
+  	width: 760px;
+  	background-color: #FFF;
+  	border: 1px solid #CCC;
+  	height: 540px;
+}
+
+.title, .body {
+	padding: 10px 20px;
+}
+
+.title h3 {
+	background-color: #6495ED;
+	color: #FFF;
+	padding: 5px 20px;
+}
+
+.form-horizontal .form-group {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.form-group {
+  	padding-bottom: 50px;
+  	clear: left;
+}
+
+.group {
+  	padding-bottom: 30px;
+  	clear: left;
+}
+
+fieldset {
+  	border: 1px solid #CCC;
+ 	width: 100%;
+  	margin-left: 16.67%;
+	border-radius: 4px;
+}
+
+.control-label {
+	padding-top: 7px;
+	margin-bottom: 0;
+	text-align: right;
+	font-weight: 700;
+}
+
+label {
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 5px;
+	padding-right: 10px;
+}
+
+.btn {
+	display: inline-block;
+	margin-bottom: 15px;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid #CCC;
+	white-space: nowrap;
+	padding: 10px 15px;
+	font-size: 15px;
+	line-height: 1.42857143;
+	border-radius: 4px;
+	-webkit-user-select: none;
+}
+
+.btn-bottom {
+  	bottom: 0;
+  	margin-bottom: 0;
+  	margin-top: 310px;
+}
+
+.form-control {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.form-control-inside {
+  	display: inline;
+  	width: auto;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.error {
+	display: none;
+	color: red;
+	font-size: 8pt;
+	padding-bottom: 10px;
+}
+.form-control-error {
+	border: 1px solid red;
+}
+
+.col-1 {
+  	width: 8%;
+}
+
+.col-2 {
+  	width: 16%;
+}
+
+.col-3 {
+  	width: 24%;
+}
+
+.col-4 {
+  	width: 32%;
+}
+
+.col-5 {
+  	width: 40%;
+}
+
+.col-6 {
+  	width: 48%;
+}
+
+.col-7 {
+  	width: 56%;
+}
+
+.col-8 {
+  	width: 64%;
+}
+
+.col-9 {
+  	width: 72%;
+}
+
+.col-10 {
+  	width: 80%;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 
+.col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+	float: left;
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
