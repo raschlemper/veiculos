@@ -10,8 +10,11 @@
 </head>
 
 <body>
-                    
-    <?php 
+
+    <?php
+
+        $conn = mysql_connect("localhost", "root", "123456");
+        mysql_select_db("locadoraveiculos");
 
         function getMarca($id) {
             $data = file_get_contents('marca.json');
@@ -34,71 +37,44 @@
             return null;
         }
 
+        function getOpcionalValue($id) {
+            foreach($_POST["ckbOpcional"] as $opcional) { 
+                $opc = getOpcional($opcional);
+                if($opc[key] == $id) return "S";
+            }
+            return null;
+        }
+
+        function getOpcionalOutroValue($id) {
+            foreach($_POST["ckbOpcional"] as $opcional) { 
+                $opc = getOpcional($opcional);
+                if($opc[key] == $id) return "$opc[label]";
+            }
+            return null;
+        }
+
+        $marca = getMarca($_POST["marca"]);
+        $direcao = getOpcionalValue("direcaoHidraulica");
+        $ar_condicionado = getOpcionalValue("arCondiconado");
+        $air_bag = getOpcionalValue("airBag");
+        $alarme = getOpcionalValue("alarme");
+        $banco_couro = getOpcionalValue("bancoCouro");
+        $som = getOpcionalValue("som");
+        $tavas = getOpcionalValue("travas");
+        $piloto_automatico = getOpcionalValue("pilotoAutomatico");
+        $outro = getOpcionalOutroValue("outro");
+
+        $result = mysql_query("insert into veiculo (marca, modelo, ano, direcao, ar_condicionado, air_bag, alarme, banco_couro, som, 
+                                                    tavas, piloto_automatico, outro) 
+                                            values ('".$marca[value]."','".$_POST["modelo"]."','".$_POST["ano"]."',
+                                                    '".$direcao."','".$ar_condicionado."','".$air_bag."',
+                                                    '".$alarme."','".$banco_couro."','".$som."',
+                                                    '".$tavas."','".$piloto_automatico."','".$outro."')") 
+                              or die ("Erro ao cadastrar autor");
+
+        header("location: cadastro.php");                      
+
     ?>
-
-	<div class="content">
-
-		<div class="title">
-			<h3>Veíulo Cadastrado</h3>
-		</div>	
-
-		<div class="body">
-
-            <div class="col-8">
-
-                <div class="group">
-                    <div class="text-right col-4"><strong>Marca</strong></div>
-                    <div class="text-left col-5">
-                        <?php 
-                            $marca = getMarca($_POST["marca"]);
-                            echo $marca[value];
-                        ?>
-                    </div>
-                </div>
-                <div class="group">
-                    <div class="text-right col-4"><strong>Modelo</strong></div>
-                    <div class="text-left col-5">
-                        <?php 
-                            $modelo = $_POST["modelo"];
-                            echo $modelo;
-                        ?>
-                    </div>
-                </div>
-                <div class="group">
-                    <div class="text-right col-4"><strong>Ano Fabricação</strong></div>
-                    <div class="text-left col-5">
-                        <?php 
-                            $ano = $_POST["ano"];
-                            echo $ano;
-                        ?>
-                    </div>
-                </div>
-                <div class="group">
-                    <div class="text-right col-4"><strong>Opcionais</strong></div>
-                    <div class="text-left col-5">
-                        <?php 
-                            foreach($_POST["ckbOpcional"] as $opcional) { 
-                                $opc = getOpcional($opcional);
-                                echo $opc[label] . "<BR>"; 
-                            }
-                        ?>
-                    </div>
-                </div>  
-
-            </div>
-
-            <div class="col-2">
-
-                <div>
-                    <button type="button" class="btn" 
-                        onclick="location.href='cadastro.php';">Voltar</button>
-                </div>    
-
-            </div>    
-
-		</div>	
-
-	</div>	
 
 </body>
 

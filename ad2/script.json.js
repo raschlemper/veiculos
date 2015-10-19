@@ -23,14 +23,14 @@ app.json = {
 		{'key': 20, 'value': 'Volvo'}
 	],
 	opcionais: [
-		{'id': 'direcaoHidraulica', 'value': 'dh', 'label': 'Direção Hidraulica'},
-		{'id': 'arCondiconado', 'value': 'ac', 'label': 'Ar Condicionado'},
-		{'id': 'airBag', 'value': 'ab', 'label': 'Air Bag'},
-		{'id': 'alarme', 'value': 'al', 'label': 'Alarme'},
-		{'id': 'bancoCouro', 'value': 'bc', 'label': 'Banco de Couro'},
-		{'id': 'som', 'value': 'so', 'label': 'Som'},
-		{'id': 'travas', 'value': 'tr', 'label': 'Travas'},
-		{'id': 'pilotoAutomatico', 'value': 'pa', 'label': 'Piloto Automático'},
-		{'id': 'outro', 'value': 'ou', 'label': 'Outro', 'input': 'text'}
+		{'id': 0, 'value': 'dh', 'label': 'Direção Hidraulica'},
+		{'id': 1, 'value': 'ac', 'label': 'Ar Condicionado'},
+		{'id': 2, 'value': 'ab', 'label': 'Air Bag'},
+		{'id': 3, 'value': 'al', 'label': 'Alarme'},
+		{'id': 4, 'value': 'bc', 'label': 'Banco de Couro'},
+		{'id': 5, 'value': 'so', 'label': 'Som'},
+		{'id': 6, 'value': 'tr', 'label': 'Travas'},
+		{'id': 7, 'value': 'pa', 'label': 'Piloto Automático'},
+		{'id': 8, 'value': 'ou', 'label': 'Outro', 'input': 'text'}
 	]
 }

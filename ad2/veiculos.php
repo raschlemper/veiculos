@@ -36,7 +36,7 @@
 
             </div>    
 
-            <div class="col-full">
+            <div class="col-full scroll">
 
                 <table class="table table-bordered">
                     <thead>
@@ -56,10 +56,10 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php
+                            while ($relacao = mysql_fetch_array($result)) {
+                        ?> 
                         <tr>
-                            <?php
-                                while ($relacao = mysql_fetch_array($result)) {
-                            ?> 
                             <td class="text-left"><?php echo $relacao["marca"]; ?></td>
                             <td class="text-left"><?php echo $relacao["modelo"]; ?></td>
                             <td class="text-center"><?php echo $relacao["ano"]; ?></td>
@@ -71,11 +71,11 @@
                             <td class="text-center"><?php if($relacao["som"] == 'S') { echo X; } ?></td>
                             <td class="text-center"><?php if($relacao["tavas"] == 'S') { echo X; } ?></td>
                             <td class="text-center"><?php if($relacao["piloto_automatico"] == 'S') { echo X; } ?></td>
-                            <td class="text-center"><?php $relacao["outro"] ?></td>
-                            <?php 
-                                }
-                            ?> 
+                            <td class="text-center"><?php echo $relacao["outro"] ?></td>
                         </tr>
+                        <?php 
+                            }
+                        ?> 
                     </tbody>    
                 </table> 
 

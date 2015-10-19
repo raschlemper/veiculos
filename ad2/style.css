@@ -143,6 +143,11 @@ a.btn {
 	border: 1px solid red;
 }
 
+.scroll {  
+    overflow-y: scroll;
+    height: 360px;
+}
+
 table {
     background-color: transparent;
     border-spacing: 0;
